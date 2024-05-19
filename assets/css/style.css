@@ -120,15 +120,17 @@ nav  li {
 
 .categoria { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 50px;
 }
 
 .cat {
     display: flex;
     flex-direction: column;
+    
     align-items: center;
-    margin: 50px;
+    margin: 50px 0px 0px 50px;
+    width: 20%;
 }
 
 .cat a {
@@ -137,9 +139,8 @@ nav  li {
 }
 
 .cat img {
-    height: 300px;
-    width: 300px;
-    border-radius: 150px;
+    width: 90%;
+    border-radius: 50%;
 }
 
 .cat img:hover {
@@ -265,14 +266,115 @@ footer {
 .social_content {
     display: flex;
     flex-direction: column;
+    width: 300px;
 }
 
 .social_logo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 30px;
 }
 .social_logo img{
     width: 50px;
 }
 
+.menu_mobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+   }
+
+@media (max-width:970px) {
+
+    .menu_mobile {
+        display: block;
+        margin-left: 20px;    
+    }
+    
+    .mm_line { 
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    
+    .navlogo{
+        margin-left: 0;
+        flex-direction: row-reverse;
+        justify-content: left;
+    }
+
+    .logo { 
+        width: 100px;
+    }
+
+    nav ul { 
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin-top: 130px;
+        background-color: #000;
+   }
+
+
+
+
+
+   .categoria {
+        flex-wrap: wrap;
+   }
+
+   .cat {
+    width: 30%;
+    margin: 20px ;
+   }
+
+
+   footer { 
+    padding-top: 20px;
+    flex-direction: column;
+   }
+
+   .menu, .sobre, .social {
+    margin-top: 30px;
+   }
+
+
+
+   .social {
+    padding: 0;
+   }
+
+   .social_content {
+    width: 100%;
+   }
+
+
+
+
+   
+    
+}
+@media (max-width:700px) {
+    .produto {
+        width: 30%;
+    }
+
+    .produtos {
+        justify-content: space-around;
+        
+    }
+}
+
+@media (max-width:500px) {
+    .produto {
+        width: 45%;
+    }
+
+
+}
